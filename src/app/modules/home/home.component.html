@@ -1,1 +1,24 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Total Time in Month</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees" >
+                <td [ngClass]="{'less-then-100': employee.TotalTimeInMonth < 100}">{{employee.EmployeeName}}</td>
+                <td [ngClass]="{'less-then-100': employee.TotalTimeInMonth < 100}">{{employee.TotalTimeInMonth}} hours</td>
+                <td [ngClass]="{'less-then-100': employee.TotalTimeInMonth < 100}">
+                    <button class="btn btn-primary" (click)="editEmployee(employee.Id)">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
+    <div>
+        <app-chart></app-chart>
+    </div>
+</div>
