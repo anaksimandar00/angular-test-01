@@ -1,5 +1,5 @@
 export interface DisplayEmployee {
-    Id: number;
+    Id: string;
     EmployeeName: string;
     TotalTimeInMonth: number; 
 }
