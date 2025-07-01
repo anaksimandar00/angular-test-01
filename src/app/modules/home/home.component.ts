@@ -15,7 +15,7 @@ export class HomeComponent {
   ngOnInit() {
     this.restService.getAll('gettimeentries').subscribe(
       (data) => {
-        console.log(data);  
+        //console.log(data);  
         this.employees = this.calculateTotalHours(data);
       },
       (error) => {
@@ -31,8 +31,8 @@ export class HomeComponent {
       const id = employe.Id;
       const startDate = new Date(employe.StarTimeUtc);
       const endDate = new Date(employe.EndTimeUtc);
-      console.log(startDate.getTime());
-      console.log(endDate.getTime())
+      //console.log(startDate.getTime());
+      //console.log(endDate.getTime())
       const hours = (endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60)
       const roundedHours = Math.round(hours * 100) / 100; // round to 2 decimal places
 
