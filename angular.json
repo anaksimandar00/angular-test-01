@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-test-01": {
+    "Task2": {
       "projectType": "application",
       "schematics": {},
       "root": "",
